@@ -1,0 +1,32 @@
+{
+  "name": "qansigliere-testrailapiintegration",
+  "version": "0.1.0",
+  "description": "The main idea of ​​this library created in the JavaScript language is to provide a ready-made set of API methods for integration with Testrail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QANSIGLIERE/testrailAPIIntegration.git"
+  },
+  "keywords": [
+    "npmjs",
+    "testrail",
+    "api",
+    "js",
+    "javascript",
+    "integration",
+    "qansigliere",
+    "test",
+    "run",
+    "plan",
+    "case"
+  ],
+  "author": "qansigliere@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QANSIGLIERE/testrailAPIIntegration/issues"
+  },
+  "homepage": "https://github.com/QANSIGLIERE/testrailAPIIntegration#readme"
+}
