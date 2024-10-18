@@ -41,6 +41,17 @@ var { TestRail_API } = require('qansigliere-testrail-api-integration');
 
 ## API Documentation
 
+### Roles
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077853258772-Roles)
+
+#### get_roles
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_roles();
+```
+
 ### Statuses
 
 TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077935129364-Statuses)
