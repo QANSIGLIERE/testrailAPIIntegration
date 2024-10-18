@@ -190,6 +190,42 @@ Feature: Users cannot login with invalid credentials
 The login page should not allow users to login with invalid credentials, and it should not reveal sensitive info relating to the correctness of credentials.Background:Given I am viewing the login page`);
 ```
 
+### Case Fields
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077281158164-Case-Fields)
+
+#### get_case_fields
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_case_fields();
+```
+
+#### add_case_field
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_case_field({
+    "type": "Multiselect",
+    "name": "my_multiselect",
+    "label": "My Multiselect",
+    "description": "my custom Multiselect description",
+    "configs": [
+        {
+            "context": {
+                "is_global": true,
+                "project_ids": ""
+            },
+            "options": {
+                "is_required": false,
+                "items": "1, One\n2, Two"
+            }
+        }
+    ],
+    "include_all": true
+});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
