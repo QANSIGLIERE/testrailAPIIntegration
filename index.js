@@ -3,7 +3,7 @@ var { TestRail_API } = require('./lib/api_integration.js');
 (async function Demo() {
     let new_integration = new TestRail_API();
 
-    let resp = await new_integration.get_case_statuses();
+    let resp = await new_integration.get_templates(1);
 
     console.log(JSON.stringify(resp));
 })();
