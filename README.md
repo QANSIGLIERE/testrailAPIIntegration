@@ -96,9 +96,20 @@ let resp = await new_integration.get_templates(1);
 
 TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077746564244-Priorities)
 
-#### get_case_types
+#### get_priorities
 
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_priorities();
+```
+
+### Result Fields
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077871398036-Result-Fields)
+
+#### get_result_fields
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_result_fields();
 ```
