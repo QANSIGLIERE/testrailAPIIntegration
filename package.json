@@ -1,5 +1,5 @@
 {
-  "name": "qansigliere-testrailapiintegration",
+  "name": "qansigliere-testrail-api-integration",
   "version": "0.1.0",
   "description": "The main idea of ​​this library created in the JavaScript language is to provide a ready-made set of API methods for integration with Testrail",
   "main": "index.js",
