@@ -1,15 +1,11 @@
-var { TestRailAPI } = require('./lib/apiIntegration.js');
+var { TestRail_API } = require('./lib/api_integration.js');
 
 (async function Demo() {
-    let apiIntegration = new TestRailAPI(
-        'qansigliere.testrail.io',
-        'qansigliere@gmail.com',
-        'GPco0JvzmQL1gxcb1Xsb-cAbHKPg51Kye4oNWVE5u',
-    );
+    let new_integration = new TestRail_API();
 
-    let resp = await apiIntegration.getProject(1);
+    let resp = await new_integration.get_Project(1);
 
     console.log(JSON.stringify(resp));
 })();
 
-module.exports.TestRailAPI = TestRailAPI;
+module.exports.TestRail_API = TestRail_API;
