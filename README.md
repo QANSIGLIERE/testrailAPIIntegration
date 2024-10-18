@@ -226,6 +226,24 @@ let resp = await new_integration.add_case_field({
 });
 ```
 
+### Reports
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077825062036-Reports)
+
+#### get_reports
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_reports(1);
+```
+
+#### run_report
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.run_report(1);
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
