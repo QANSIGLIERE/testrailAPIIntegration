@@ -34,7 +34,7 @@ var { TestRail_API } = require('qansigliere-testrail-api-integration');
 
 (async function Demo() {
     let new_integration = new TestRail_API();
-    let resp = await new_integration.get_Project(1);
+    let resp = await new_integration.get_templates(1);
     console.log(JSON.stringify(resp));
 })();
 ```
@@ -57,4 +57,15 @@ let resp = await new_integration.get_case_statuses();
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_statuses();
+```
+
+### Templates
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077938165780-Templates)
+
+#### get_templates
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_templates(1);
 ```
