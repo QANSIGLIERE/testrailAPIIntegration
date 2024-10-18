@@ -244,6 +244,41 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.run_report(1);
 ```
 
+### Variables
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077979742868-Variables)
+
+#### get_variables
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_variables(1);
+```
+
+#### add_variable
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_variable(1, { id: 613, name: 'f' });
+```
+
+#### update_variable
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_variable(1, {
+    id: 1171,
+    name: 'age',
+});
+```
+
+#### delete_variable
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_variable(1, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
