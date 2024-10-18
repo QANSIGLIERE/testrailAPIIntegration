@@ -41,6 +41,17 @@ var { TestRail_API } = require('qansigliere-testrail-api-integration');
 
 ## API Documentation
 
+### Case Types
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077295487252-Case-Types)
+
+#### get_case_types
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_case_types();
+```
+
 ### Roles
 
 TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077853258772-Roles)
