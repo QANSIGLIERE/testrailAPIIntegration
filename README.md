@@ -168,8 +168,31 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_run(2, {});
 ```
 
+### BDDs
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7832161593620-BDDs)
+
+#### get_bdd
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_bdd(5);
+```
+
+#### add_bdd
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_bdd(
+    1,
+    `@APP-1
+Feature: Users cannot login with invalid credentials
+The login page should not allow users to login with invalid credentials, and it should not reveal sensitive info relating to the correctness of credentials.Background:Given I am viewing the login page`);
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
 -   https://youtube.com/live/IC4hoYwzvDY?feature=share
 -   https://youtube.com/live/o9yonQpeFg4?feature=share
+-   https://youtube.com/live/qjw5o0Kk6iQ?feature=share
