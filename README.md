@@ -41,6 +41,17 @@ var { TestRail_API } = require('qansigliere-testrail-api-integration');
 
 ## API Documentation
 
+### Case Types
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077295487252-Case-Types)
+
+#### get_case_types
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_case_types();
+```
+
 ### Roles
 
 TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077853258772-Roles)
@@ -79,4 +90,26 @@ TestRail documentation is present [here](https://support.testrail.com/hc/en-us/a
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_templates(1);
+```
+
+### Priorities
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077746564244-Priorities)
+
+#### get_priorities
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_priorities();
+```
+
+### Result Fields
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077871398036-Result-Fields)
+
+#### get_result_fields
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_result_fields();
 ```
