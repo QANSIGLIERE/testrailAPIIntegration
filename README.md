@@ -466,6 +466,61 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_suite(11, {});
 ```
 
+### Sections
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077918603412-Sections)
+
+#### get_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_section(9);
+```
+
+#### get_sections
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_sections(8, 10);
+```
+
+#### add_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_section(8, {
+suite_id: 10,
+    name: 'This section is generated via API',
+    parent_id: 9,
+});
+```
+
+#### move_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.move_section(10, {
+    parent_id: null,
+    after_id: 8,
+});
+```
+
+#### update_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_section(10, {
+    name: 'Updated via API',
+});
+```
+
+#### delete_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_section(10, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
