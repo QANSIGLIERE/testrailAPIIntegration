@@ -279,9 +279,57 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_variable(1, {});
 ```
 
+### Projects
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077792415124-Projects)
+
+#### get_project
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_project(1);
+```
+
+#### get_projects
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_projects();
+```
+
+#### add_project
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_project({
+    name: 'Generated via QANSIGLIERE API library',
+    announcement: 'Welcome to my project',
+    show_announcement: true,
+});
+```
+
+#### update_project
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_project(7, {
+    name: 'Updated via QANSIGLIERE API library',
+    announcement: 'Subscribe to the channel',
+    show_announcement: true,
+});
+```
+
+#### delete_project
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_project(7, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
 -   https://youtube.com/live/IC4hoYwzvDY?feature=share
 -   https://youtube.com/live/o9yonQpeFg4?feature=share
 -   https://youtube.com/live/qjw5o0Kk6iQ?feature=share
+-   https://youtube.com/live/XRJWPa8UW3M?feature=share
