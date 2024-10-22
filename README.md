@@ -326,6 +326,101 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_project(7, {});
 ```
 
+### Results
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077819312404-Results)
+
+#### get_results
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_results(14));
+```
+
+#### get_results_for_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_results_for_case(4, 14);
+```
+
+#### get_results_for_run
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_results_for_run(4);
+```
+
+#### add_result
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_result(14, { status_id: 5, comment: 'This test failed' });
+```
+
+#### add_result_for_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_result_for_case(4, 16, { status_id: 1, comment: 'This test passed' });
+```
+
+#### add_results
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_results(4, {
+    results: [
+        {
+            test_id: 17,
+            status_id: 1,
+            comment: 'This test failed',
+            defects: 'TR-7',
+        },
+        {
+            test_id: 18,
+            status_id: 5,
+            comment: 'This test passed',
+            elapsed: '5m',
+            version: '1.0 RC1',
+        },
+        {
+            test_id: 19,
+            status_id: 2,
+            comment: 'Assigned this test to Joe',
+        },
+    ],
+});
+```
+
+#### add_results_for_cases
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_results_for_cases(4, {
+    results: [
+        {
+            case_id: 17,
+            status_id: 1,
+            comment: 'This test failed',
+            defects: 'TR-7',
+        },
+        {
+            case_id: 18,
+            status_id: 5,
+            comment: 'This test passed',
+            elapsed: '5m',
+            version: '1.0 RC1',
+        },
+        {
+            case_id: 19,
+            status_id: 2,
+            comment: 'Assigned this test to Joe',
+        },
+    ],
+});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
