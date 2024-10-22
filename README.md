@@ -421,6 +421,51 @@ let resp = await new_integration.add_results_for_cases(4, {
 });
 ```
 
+### Suites
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077936624276-Suites)
+
+#### get_suite
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_suite(10);
+```
+
+#### get_suites
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_suites(4);
+```
+
+#### add_suite
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_suite(4, {
+    name: 'This is a new test suite',
+    description: 'Use the description to add additional context details',
+});
+```
+
+#### update_suite
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_suite(11, {
+    name: 'This is changed via API',
+    description: 'Like this video',
+});
+```
+
+#### delete_suite
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_suite(11, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
