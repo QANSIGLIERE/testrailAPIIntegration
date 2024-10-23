@@ -521,6 +521,49 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_section(10, {});
 ```
 
+### Milestones
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077723976084-Milestones)
+
+#### get_milestone
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_milestone(1);
+```
+
+#### get_milestones
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_milestones(4);
+```
+
+#### add_milestone
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_milestone(4, {
+     name: 'This milestone has been created via API',
+});
+```
+
+#### update_milestone
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_milestone(2, {
+    name: 'Updated via API',
+});
+```
+
+#### delete_milestone
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_milestone(2, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
@@ -528,3 +571,4 @@ let resp = await new_integration.delete_section(10, {});
 -   https://youtube.com/live/o9yonQpeFg4?feature=share
 -   https://youtube.com/live/qjw5o0Kk6iQ?feature=share
 -   https://youtube.com/live/XRJWPa8UW3M?feature=share
+-   https://youtube.com/live/4y6EgblRqP0?feature=share
