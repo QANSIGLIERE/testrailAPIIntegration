@@ -564,6 +564,52 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_milestone(2, {});
 ```
 
+### Groups
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077338821012-Groups)
+
+#### get_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_group(1);
+```
+
+#### get_groups
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_groups();
+```
+
+#### add_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_group({
+    name: 'New Group',
+    user_ids: [1, 2, 3, 4, 5],
+});
+```
+
+#### update_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_group(2, {
+    group_id: 2,
+    name: 'Updated Group via API',
+    user_ids: [1, 2, 3, 4, 5],
+});
+```
+
+#### delete_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_group(2, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
