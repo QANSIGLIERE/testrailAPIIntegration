@@ -686,6 +686,78 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.get_tests(5);
 ```
 
+### Shared Steps
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077919815572-Shared-Steps)
+
+#### get_shared_step
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_shared_step(1);
+```
+
+#### get_shared_step_history
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_shared_step_history(1);
+```
+
+#### get_shared_steps
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_shared_steps(4);
+```
+
+#### add_shared_step
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_shared_step(4, {
+    title: 'First Step',
+       custom_steps_separated: [
+        {
+            content: 'Open home page',
+            additional_info: 'Must be a new browser session',
+            expected: 'Login page loads',
+            refs: 'RF-1',
+        },
+        {
+            content: 'Log In',
+        },
+    ],
+});
+```
+
+#### update_shared_step
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_shared_step(2, {
+    title: 'Updated VIA API',
+    custom_steps_separated: [
+        {
+            content: 'Subscribe',
+            additional_info: 'Must be a new comment here',
+            expected: 'Login page loads',
+            refs: 'RF-1',
+        },
+        {
+            content: 'Log In',
+        },
+    ],
+});
+```
+
+#### delete_shared_step
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_shared_step(2, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
