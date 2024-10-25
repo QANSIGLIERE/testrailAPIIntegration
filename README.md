@@ -610,6 +610,64 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_group(2, {});
 ```
 
+### Users
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077978310292-Users)
+
+#### get_user
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_user(1);
+```
+
+#### get_current_user
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_current_user(1);
+```
+
+#### get_user_by_email
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_user_by_email('qansigliere@gmail.com');
+```
+
+#### get_users
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_users();
+```
+
+#### get_users\_\_project_id
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_users__project_id(1);
+```
+
+#### add_user
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_user({
+        name: 'Don Gun',
+        email: 'qansigliere+1@gmail.com',
+});
+```
+
+#### update_user
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_user(2, {
+        name: 'Updated API',
+});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
@@ -618,3 +676,4 @@ let resp = await new_integration.delete_group(2, {});
 -   https://youtube.com/live/qjw5o0Kk6iQ?feature=share
 -   https://youtube.com/live/XRJWPa8UW3M?feature=share
 -   https://youtube.com/live/4y6EgblRqP0?feature=share
+-   https://youtube.com/live/fTWMR7L6sCE?feature=share
