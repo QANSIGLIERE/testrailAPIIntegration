@@ -668,6 +668,24 @@ let resp = await new_integration.update_user(2, {
 });
 ```
 
+### Tests
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077990441108-Tests)
+
+#### get_test
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_test(20);
+```
+
+#### get_tests
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_tests(5);
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share

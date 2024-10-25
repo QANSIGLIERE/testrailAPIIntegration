@@ -3,9 +3,7 @@ var { TestRail_API } = require('./lib/api_integration.js');
 (async function Demo() {
     let new_integration = new TestRail_API();
 
-    let resp = await new_integration.update_user(2, {
-        name: 'UPDATED API',
-    });
+    let resp = await new_integration.get_tests(5);
 
     console.log(JSON.stringify(resp));
 })();
