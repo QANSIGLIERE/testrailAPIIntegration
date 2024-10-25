@@ -758,6 +758,52 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_shared_step(2, {});
 ```
 
+### Datasets
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077300491540-Datasets)
+
+#### get_dataset
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_dataset(1);
+```
+
+#### get_datasets
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_datasets(4);
+```
+
+#### add_dataset
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_dataset(4, {
+    id: 311,
+    name: 'Def',
+    variables: [],
+});
+```
+
+#### update_dataset
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_dataset(3, {
+    name: 'API',
+    variables: [],
+});
+```
+
+#### delete_dataset
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_dataset(3, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
