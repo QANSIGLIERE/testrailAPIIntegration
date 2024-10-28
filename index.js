@@ -3,9 +3,7 @@ var { TestRail_API } = require('./lib/api_integration.js');
 (async function Demo() {
     let new_integration = new TestRail_API();
 
-    let resp = await new_integration.delete_cases(6, {
-        case_ids: [24],
-    });
+    let resp = await new_integration.delete_run_from_plan_entry(21, {});
 
     console.log(JSON.stringify(resp));
 })();

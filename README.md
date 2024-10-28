@@ -913,6 +913,132 @@ let resp = await new_integration.delete_cases(6, {
 });
 ```
 
+### Plans
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077711537684-Plans)
+
+#### get_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_plan(6);
+```
+
+#### get_plans
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_plans(9);
+```
+
+#### add_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_plan(9, {
+    name: "System test",
+    entries: [
+        {
+            suite_id: 12,
+            name: "Custom run name",
+            assignedto_id: 1 // ID of the assignee
+        },
+        {
+            suite_id: 12,
+            include_all: false, // Custom selection
+            case_ids: [28, 29, 30]
+        }
+    ]
+});
+```
+
+#### add_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_plan_entry(9, {
+    suite_id: 12,
+    include_all: true,
+    runs: [
+        {
+            "include_all": false,
+            "case_ids": [28],
+        },
+        {
+            "include_all": false,
+            "case_ids": [28, 29, 30],
+        },
+    ]
+});
+```
+
+#### add_run_to_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_run_to_plan_entry(9, "0e165a00-bf50-4482-bde1-3134c1dacd50", {
+    config_ids: [1],
+    include_all: false,
+    case_ids: [28, 29, 30]
+});
+```
+
+#### update_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_plan(9, {
+    name: "Updated VIA API",
+});
+```
+
+#### update_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_plan_entry(9, "0e165a00-bf50-4482-bde1-3134c1dacd50", {
+    name: "updated too",
+    description: "it was updated via qansigliere JS lib"
+});
+```
+
+#### update_run_in_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_run_in_plan_entry(10, {
+    include_all: true,
+});
+```
+
+#### close_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.close_plan(14, {});
+```
+
+#### delete_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_plan(15, {});
+```
+
+#### delete_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_plan_entry(9, "0e165a00-bf50-4482-bde1-3134c1dacd50", {});
+```
+
+#### delete_run_from_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_run_from_plan_entry(21, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
