@@ -1100,6 +1100,94 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_config(3, {});
 ```
 
+### Attachments
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077196481428-Attachments)
+
+#### add_attachment_to_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_attachment_to_case(24, 'icon.png');
+```
+
+#### add_attachment_to_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_attachment_to_plan(16, 'icon.png');
+```
+
+#### add_attachment_to_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_attachment_to_plan_entry(16, "0e165a00-bf50-4482-bde1-3134c1dacd50", 'icon.png');
+```
+
+#### add_attachment_to_result
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_attachment_to_result(46, 'icon.png');
+```
+
+#### add_attachment_to_run
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_attachment_to_run(22, 'icon.png');
+```
+
+#### get_attachments_for_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachments_for_case(28);
+```
+
+#### get_attachments_for_plan
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachments_for_plan(16);
+```
+
+#### get_attachments_for_plan_entry
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachments_for_plan_entry(16, "0e165a00-bf50-4482-bde1-3134c1dacd50");
+```
+
+#### get_attachments_for_run
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachments_for_run(10);
+```
+
+#### get_attachments_for_test
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachments_for_test(26);
+```
+
+#### get_attachment
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_attachment('30a47475-de26-4215-9459-b9094aa3b42e');
+```
+
+#### delete_attachment
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_attachment('30a47475-de26-4215-9459-b9094aa3b42e', {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
