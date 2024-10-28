@@ -804,6 +804,115 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_dataset(3, {});
 ```
 
+### Cases
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077292642580-Cases)
+
+#### get_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_case(14);
+```
+
+#### get_cases
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_cases(4, 6);
+```
+
+#### get_history_for_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_history_for_case(14);
+```
+
+#### add_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_case(5, {
+    title: 'This is a test case',
+    type_id: 1,
+    priority_id: 3,
+    estimate: '3m',
+    refs: 'RF-1, RF-2',
+    custom_steps_separated: [
+        {
+            content: 'Step 1',
+            expected: 'Expected Result 1',
+        },
+        {
+            content: 'Step 2',
+            expected: 'Expected Result 2',
+        },
+        {
+            shared_step_id: 3,
+        },
+    ],
+});
+```
+
+#### copy_cases_to_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.copy_cases_to_section(5, {
+    section_id: 5,
+    case_ids: [22, 23]
+});
+```
+
+#### update_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_case(11, {
+    priority_id: 1,
+    estimate: "5m"
+});
+```
+
+#### update_cases
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_cases(6, {
+    case_ids: [26, 27],
+    priority_id: 1,
+    estimate: "5m"
+});
+```
+
+#### move_cases_to_section
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.move_cases_to_section(12, {
+    section_id: 12,
+    suite_id: 6,
+    case_ids: [26, 27]
+});
+```
+
+#### delete_case
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_case(25, {});
+```
+
+#### delete_cases
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_cases(6, {
+    case_ids: [23, 24],
+});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
@@ -813,3 +922,4 @@ let resp = await new_integration.delete_dataset(3, {});
 -   https://youtube.com/live/XRJWPa8UW3M?feature=share
 -   https://youtube.com/live/4y6EgblRqP0?feature=share
 -   https://youtube.com/live/fTWMR7L6sCE?feature=share
+-   https://youtube.com/live/XG9moLSdXuk?feature=share
