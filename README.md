@@ -1039,6 +1039,67 @@ let new_integration = new TestRail_API();
 let resp = await new_integration.delete_run_from_plan_entry(21, {});
 ```
 
+### Configurations
+
+TestRail documentation is present [here](https://support.testrail.com/hc/en-us/articles/7077298488340-Configurations)
+
+#### get_configs
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.get_configs(9);
+```
+
+#### add_config_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_config_group(9, {
+    name: "Browsers"
+});
+```
+
+#### add_config
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.add_config(3, {
+    name: "Chrome"
+});
+```
+
+#### update_config_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_config_group(3, {
+    "name": "Operating Systems"
+});
+```
+
+#### update_config
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.update_config(3, {
+    "name": "Firefly"
+});
+```
+
+#### delete_config_group
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_config_group(3, {});
+```
+
+#### delete_config
+
+```
+let new_integration = new TestRail_API();
+let resp = await new_integration.delete_config(3, {});
+```
+
 ## Related Videos
 
 -   https://youtube.com/live/q2NO23ruDqI?feature=share
