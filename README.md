@@ -1198,3 +1198,4 @@ let resp = await new_integration.delete_attachment('30a47475-de26-4215-9459-b909
 -   https://youtube.com/live/4y6EgblRqP0?feature=share
 -   https://youtube.com/live/fTWMR7L6sCE?feature=share
 -   https://youtube.com/live/XG9moLSdXuk?feature=share
+-   https://youtube.com/live/bUy-FJYVz2M?feature=share
