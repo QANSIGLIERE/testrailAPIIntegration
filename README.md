@@ -680,6 +680,7 @@ let resp = await new_integration.get_test(20);
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_tests(5);
+// let resp = await new_integration.get_tests('5&limit=30&status_id=2');
 ```
 
 ### Shared Steps
@@ -816,6 +817,7 @@ let resp = await new_integration.get_case(14);
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_cases(4, 6);
+// let resp = await new_integration.get_cases(4, '6&priority_id=4');
 ```
 
 #### get_history_for_case
@@ -1140,6 +1142,7 @@ let resp = await new_integration.add_attachment_to_run(22, 'icon.png');
 ```
 let new_integration = new TestRail_API();
 let resp = await new_integration.get_attachments_for_case(28);
+// let resp = await new_integration.get_attachments_for_case('11&limit=1');
 ```
 
 #### get_attachments_for_plan
