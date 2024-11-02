@@ -183,11 +183,7 @@ let resp = await new_integration.get_bdd(5);
 
 ```
 let new_integration = new TestRail_API();
-let resp = await new_integration.add_bdd(
-    1,
-    `@APP-1
-Feature: Users cannot login with invalid credentials
-The login page should not allow users to login with invalid credentials, and it should not reveal sensitive info relating to the correctness of credentials.Background:Given I am viewing the login page`);
+let resp = await new_integration.add_bdd(1, `test.txt`);
 ```
 
 ### Case Fields
