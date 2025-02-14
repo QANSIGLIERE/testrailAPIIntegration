@@ -7,6 +7,10 @@ integration with Testrail
 
 https://www.youtube.com/@QANSIGLIERE/
 
+## Support the project
+
+https://buymeacoffee.com/qansigliere
+
 ## Installation
 
 Using npm `npm i qansigliere-testrail-api-integration`
@@ -1198,3 +1202,7 @@ let resp = await new_integration.delete_attachment('30a47475-de26-4215-9459-b909
 -   https://youtube.com/live/fTWMR7L6sCE?feature=share
 -   https://youtube.com/live/XG9moLSdXuk?feature=share
 -   https://youtube.com/live/bUy-FJYVz2M?feature=share
+
+## Improvements & Suggestions
+
+https://forms.gle/GZbS9hw42tSYJxKL7
